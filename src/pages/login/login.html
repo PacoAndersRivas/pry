@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    
+</ion-content>
+
+<ion-content class="login-email" padding>
+  <button full icon-left ion-button
+        (click)="loginWith($event, 'google')">
+      <ion-icon color="#3b5998" name="logo-google"></ion-icon>
+      Google
+    </button>
+    
+  <ion-row>
+
+    <!--<div padding class="sign-up-txt" (click)="openSignUpPage()">
+      Register
+    </div>-->
+  </ion-row>
+
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="E-mail" [(ngModel)]="form.email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="form.password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block [disabled]="!loginForm.form.valid"
+      class="log-in-btn">Submit
+    </button>
+
+    <div padding class="error" *ngIf="error">
+      <p>{{error}}</p>
+    </div>
+  </form>
+</ion-content>
+
+
