@@ -1,3 +1,12 @@
 page-login {
 
 }
+.login-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efad62), color-stop(100%,#f7d47c));
+  background: -webkit-linear-gradient(top, #efad62 0%,#f7d47c 100%);
+}
+ion-item { margin-bottom: 32px !important;  }
+
